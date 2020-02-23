@@ -1,0 +1,32 @@
+.nav-bar {
+    background-color: aqua;
+    width: 100vw;
+    height: 60px;
+}
+
+.nav-text {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.nav-text li {
+    float: left;
+    padding: 10px;
+    display: block;
+}
+
+#nav-links {
+    float: right;
+}
+
+.active {
+    color: red;
+}
+
+.inactive {
+    color: blue;
+}
