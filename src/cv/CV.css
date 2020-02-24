@@ -1,0 +1,17 @@
+.cv {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    border: solid green 1px;
+    text-align: left;
+}
+
+.cv-location {
+    margin-top: 0;
+    color: darkslateblue;
+}
+
+.cv-title {
+    font-weight: bold;
+}

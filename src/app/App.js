@@ -12,8 +12,12 @@ export default class App extends Component {
     this.state = {
       active: 'About'
     };
+    this.changeActiveView = this.changeActiveView.bind(this);
   }
 
+  changeActiveView(newView){
+    this.setState({active: newView})
+  }
 
   render() {
     let content;
@@ -29,7 +33,7 @@ export default class App extends Component {
 
     return(
       <div className="App">
-        <NavBar />
+        <NavBar changeView={this.changeActiveView} active={this.state.active}/>
         {content}
       </div>
     );

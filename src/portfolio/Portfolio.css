@@ -1,0 +1,20 @@
+.portfolio {
+    text-align: center;
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+}
+
+.portfolio ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.project-box {
+    background-color: dodgerblue;
+    width: 220px;
+    height: 400px;
+    padding: 10px;
+    margin-top: 10px;
+}
