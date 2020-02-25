@@ -1,6 +1,35 @@
 .about {
     text-align: center;
     margin: auto;
-    width: 50%;
+    width: 80%;
     padding: 10px;
+    color: white;
+    padding-top: 80px;
+}
+
+.about-section-bottom {
+    background-color: paleturquoise;
+    opacity: 80%;
+    color: black;
+    min-width: 200px;
+    min-height: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 0 0 15px 15px;
+}
+
+.about-section-top {
+    background-color: plum;
+    opacity: 80%;
+    color: black;
+    min-width: 200px;
+    min-height: 40px;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    border-radius: 15px 15px 0 0;
+}
+
+.about-icon {
+    float: right;
 }

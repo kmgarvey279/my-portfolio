@@ -1,7 +1,11 @@
 .nav-bar {
-    background-color: aqua;
-    width: 100vw;
+    background-color: black;
+    width: 100%;
     height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    opacity: 80%;
 }
 
 .nav-text {
@@ -11,22 +15,32 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    color:slateblue;
+    padding-right: 10px;
 }
 
-.nav-text li {
-    float: left;
+#tabs {
+    float: right;
+}
+
+.tab {
     padding: 10px;
     display: block;
 }
 
-#nav-links {
-    float: right;
+.tab:hover {
+    cursor: pointer;
+    color: palevioletred;
 }
 
 .active {
-    color: red;
+    color: navy;
 }
 
-.inactive {
-    color: blue;
+
+.name {
+    float: left;
+    padding: 10px;
+    padding-left: 20px;
+    color:slateblue;
 }

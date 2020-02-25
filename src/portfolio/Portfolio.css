@@ -1,20 +1,36 @@
 .portfolio {
-    text-align: center;
     margin: auto;
-    width: 75%;
+    width: 50%;
     padding: 10px;
-}
-
-.portfolio ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    padding-bottom: 60px;
 }
 
 .project-box {
-    background-color: dodgerblue;
-    width: 220px;
-    height: 400px;
     padding: 10px;
     margin-top: 10px;
+}
+
+.project-info {
+    background-color: rebeccapurple;
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    opacity: 80%;
+}
+
+.project-links{
+    margin-top: 5px;
+    background-color: rebeccapurple;
+    height: 25px;
+    width: 100%;
+    opacity: 80%;
+}
+
+.project-links a {
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+    max-height: 500px;
 }
