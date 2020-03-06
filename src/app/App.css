@@ -3,13 +3,24 @@
 .App {
   text-align: center;
   background-image: url("../assets/background\ \(2\).jpg");
-  min-height: 800px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Roboto Mono';
+  min-height: 750px;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.filter {
+  background-color: black;
+  opacity: 70%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }

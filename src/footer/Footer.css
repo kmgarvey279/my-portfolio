@@ -1,12 +1,12 @@
 .footer {
-    background-color: black;
-    color:slateblue;
-    height: 40px;
+    color:crimson;
+    height: 45px;
     width: 100%;
     position: fixed;
     bottom: 0;
     padding: 5px;
-    opacity: 80%;
+    border-top: crimson 3px double;
+    background-color: rgba(112, 5, 50, 0.4);
 }
 
 .footer p {
@@ -25,5 +25,5 @@
 }
 
 .social a {
-    color:slateblue;
+    color:crimson;
 }

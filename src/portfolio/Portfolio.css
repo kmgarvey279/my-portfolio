@@ -1,36 +1,145 @@
 .portfolio {
     margin: auto;
-    width: 50%;
+    width: 70%;
     padding: 10px;
+    padding-top: 15px;
     padding-bottom: 60px;
 }
 
 .project-box {
     padding: 10px;
     margin-top: 10px;
+    max-width: 500px;
 }
 
 .project-info {
-    background-color: rebeccapurple;
-    padding: 5px;
+    background-color: rgba(112, 5, 50, 0.4);
     margin-bottom: 5px;
     width: 100%;
-    opacity: 80%;
+    padding-top: 5px;
+    color: crimson;
 }
 
 .project-links{
-    margin-top: 5px;
-    background-color: rebeccapurple;
+    margin-top: 10px;
     height: 25px;
     width: 100%;
-    opacity: 80%;
 }
 
 .project-links a {
-    padding: 10px;
+    color: rgb(23, 121, 212);
 }
 
-img {
+#git-link {
+    float: left;
+    width: 49%;
+    background-color: rgba(112, 5, 50, 0.4);
+    padding: 2px;
+}
+
+#live-link {
+    float: right;
+    padding: 2px;
+    width: 49%;
+    background-color: rgba(112, 5, 50, 0.4);
+    
+}
+
+
+.project-image {
+    position: relative;
+    width: 60vw;
+    height: 400px;
+}
+
+.project-image img {
+    height: 100%;
     width: 100%;
-    max-height: 500px;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+.arrow-left{
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+    right: 0;
+}
+
+.arrow-right {
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+    left: 0;
+}
+
+.arrow-left:hover{
+    color: orangered;
+}
+
+.arrow-right:hover{
+    color: orangered;
+}
+
+.hover-tint-inactive {
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+    position: relative;
+}
+
+p.hover-text-inactive {
+   display: none;
+   z-index: 2;
+   position: absolute;
+   left: 20%;
+   right: 20%;
+   bottom: 0;
+}
+
+.hover-tint-active {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 60%;
+    z-index: 1;
+    position: relative;
+}
+
+p.hover-text-active {
+   opacity: 100%;
+   z-index: 2;
+   position: absolute;
+   left: 20%;
+   right: 20%;
+   bottom: 0;
+}
+
+.project-previews {
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    column-count: 5;
+    margin: auto;
+    width: 100%;
+}
+
+.project-thumbnail {
+    padding-top: 7px;
+}
+
+.project-thumbnail img:hover{
+    border: solid red 2px;
+}
+
+.project-num {
+    position: absolute;
+    padding-left: 5px;
 }
