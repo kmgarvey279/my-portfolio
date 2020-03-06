@@ -11,7 +11,6 @@ export default class Preview extends Component {
       return (
         <div className="preview" id={this.props.number == this.props.current ? 'current-preview' : 'notCurrent-preview'}>
           {this.props.image}
-          <div className="preview-num">{'00' + (parseInt(this.props.number) + 1)}</div>
         </div>
       );
     };

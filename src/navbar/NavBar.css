@@ -2,7 +2,7 @@
     width: 100%;
     min-width: 600px;
     height: 60px;
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 2;
     border-bottom: crimson 3px double;

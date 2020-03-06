@@ -7,6 +7,16 @@ import { faLaptop, faChevronLeft, faChevronRight, faFileCode } from '@fortawesom
 import cryostat from '../assets/Capture.PNG';
 import bookshelf from '../assets/book-list.gif';
 import ssbu from '../assets/ssbu.gif';
+import js from '../assets/js.png';
+import react from '../assets/react.png';
+import angular from '../assets/angular.png';
+import css from '../assets/css.png';
+import html from '../assets/html.png';
+import cSharp from '../assets/c-logo.png';
+import dotNet from '../assets/.NET_Core.png';
+import node from '../assets/node.png';
+import sql from '../assets/sql.png';
+import redux from '../assets/redux.png';
 
 export default class Portfolio extends Component {
   constructor(props) {
@@ -42,7 +52,8 @@ export default class Portfolio extends Component {
         image: <img src={cryostat}/>,
         text: 'Placeholding is the best!',
         gitLink: '',
-        liveLink: ''
+        liveLink: '',
+        technologies: [<img className="skill-icon" src={js} width="25" height="25"/>, <img className="skill-icon" src={css} width="25" height="25"/>, <img className="skill-icon" src={react} width="25" height="25"/>, <img className="skill-icon" src={redux} width="25" height="25"/>]
       },
       1: {
         key: 1,
@@ -50,7 +61,8 @@ export default class Portfolio extends Component {
         image: <img src={bookshelf}/>,
         text: 'Placeholding is the best!',
         gitLink: '',
-        liveLink: ''
+        liveLink: '',
+        technologies: ['JavaScript', 'React', 'Redux']
       },
       2: {
         key: 2,
@@ -58,7 +70,8 @@ export default class Portfolio extends Component {
         image: <img src={cryostat}/>,
         text: 'Placeholding is the best!',
         gitLink: '',
-        liveLink: ''
+        liveLink: '',
+        technologies: ['JavaScript', 'React', 'Redux']
       },
       3: {
         key: 3,
@@ -66,7 +79,8 @@ export default class Portfolio extends Component {
         image: <img src={ssbu}/>,
         text: 'Placeholding is the best!',
         gitLink: '',
-        liveLink: ''
+        liveLink: '',
+        technologies: ['JavaScript', 'React', 'Redux']
       },
       4: {
         key: 4,
@@ -74,7 +88,8 @@ export default class Portfolio extends Component {
         image: <img src={ssbu}/>,
         text: 'Placeholding is the best!',
         gitLink: '',
-        liveLink: ''
+        liveLink: '',
+        technologies: ['JavaScript', 'React', 'Redux']
       },
     }
     return (
@@ -82,25 +97,40 @@ export default class Portfolio extends Component {
           <h2>- Portfolio -</h2>
           <Container>
                 <Row>
-                  <Col>
+                  {/* <Col>
                     <div className="arrow-left">
                       <FontAwesomeIcon onClick={() => this.changeProject(this.state.project - 1)} icon={faChevronLeft} size="3x" />
                     </div>
-                  </Col>
+                  </Col> */}
                   <Col>
                     <div className="project-box">
                       <Row>
-                      <div className="project-info">
-                        <h4 className="project-num">{'00' + (parseInt(this.state.project) + 1)}</h4>
-                        <h4>{projects[this.state.project].name}</h4>
-                      </div>
+                        <div className="project-info">
+                          <h4 className="project-name">{projects[this.state.project].name}</h4>
+                          <ul className="project-techs">
+                            {
+                              projects[this.state.project].technologies.map((tech) =>
+                                <li className="project-tech">{tech}</li>
+                              )
+                            }
+                          </ul>
+                        </div>
                       </Row>
                       <Row>
-                        <div className="project-image" onMouseEnter={() => this.toggleHover(true)} onMouseLeave={() => this.toggleHover(false)}>
-                          <p className={this.state.hover ? 'hover-text-active' : 'hover-text-inactive'}>{projects[this.state.project].text}</p>
-                          <div className={this.state.hover === true ? 'hover-tint-active' : 'hover-tint-inactive'}>
-                          </div>
-                          {projects[this.state.project].image}
+                        <div className="project-image-wrap">
+                            <div className="project-image-wrap-inner" onMouseEnter={() => this.toggleHover(true)} onMouseLeave={() => this.toggleHover(false)}>
+                              <p className={this.state.hover ? 'hover-text-active' : 'hover-text-inactive'}>{projects[this.state.project].text}</p>
+                              <div className={this.state.hover === true ? 'hover-tint-active' : 'hover-tint-inactive'}>
+                              </div>
+                              <div className='project-image'>{projects[this.state.project].image}</div>
+                            </div>
+                          <Col>
+                            <div className="project-previews">
+                              {Object.keys(projects).map( key =>
+                                <div className="project-thumbnail"><Preview image={projects[key].image} number={key} current={this.state.project} /></div>
+                              )}
+                            </div>
+                          </Col>
                         </div>
                       </Row>
                       <Row>
@@ -114,17 +144,10 @@ export default class Portfolio extends Component {
                         </div>
                       </Row>
                     </div>
-                    <Row>
-                    <div className="project-previews">
-                      {Object.keys(projects).map( key =>
-                        <div className="project-thumbnail"><Preview image={projects[key].image} number={key} current={this.state.project} /></div>
-                      )};
-                    </div>
-                </Row>
                   </Col>
-                  <Col>
+                  {/* <Col>
                     <FontAwesomeIcon onClick={() => this.changeProject(this.state.project + 1)} className="arrow-right" icon={faChevronRight} size="3x" />
-                  </Col>
+                  </Col> */}
                 </Row>
           </Container>
       </div>

@@ -38,6 +38,10 @@ export default class App extends Component {
         </div>
         <NavBar changeView={this.changeActiveView} active={this.state.active}/>
         {content}
+        <div className='sidebar1'></div>
+        <div className='sidebar2'></div>
+        <div className='sidebar3'></div>
+        <div className='sidebar4'></div>
         <Footer/>
       </div>
     );

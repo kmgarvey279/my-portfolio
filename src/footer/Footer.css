@@ -2,7 +2,7 @@
     color:crimson;
     height: 45px;
     width: 100%;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     padding: 5px;
     border-top: crimson 3px double;

@@ -7,7 +7,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Roboto Mono';
-  min-height: 750px;
+  min-height: 100vh;
+  position: relative;
 }
 
 .App-link {
@@ -23,4 +24,44 @@
   height: 100%;
   width: 100%;
   z-index: 0;
+}
+
+.sidebar1 {
+  height: 100%;
+  width: 1vw;
+  border-right: solid white 1px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 20%;
+}
+
+.sidebar2 {
+  height: 100%;
+  width: 1.5vw;
+  border-right: solid white 1px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 20%;
+}
+
+.sidebar3 {
+  height: 100%;
+  width: 1vw;
+  border-left: solid white 1px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 20%;
+}
+
+.sidebar4 {
+  height: 100%;
+  width: 1.5vw;
+  border-left: solid white 1px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 20%;
 }
