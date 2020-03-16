@@ -1,12 +1,14 @@
 .preview img {
-    height: 6.25vw;
-    width: 6.25vw;
+    height: 5.8vw;
+    width: 5.8vw;
+    max-width: 80px;
+    max-height: 80px;
 }
 
 #current-preview img {
-    box-shadow: 0 0 2px 2px white, 0 0 1px 1px red;
+    box-shadow: 0 0 2px 2px white;
 }
 
-.preview {
-
+#not-current-preview img:hover {
+    box-shadow: 0 0 2px 2px white;
 }

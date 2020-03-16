@@ -12,13 +12,13 @@ export default class NavBar extends Component {
                 <div className="name"><h3>Kevin Garvey</h3></div>
                 <ul className="nav-text" id="tabs">
                     <li className="tab" onClick={() => this.props.changeView('About')}>
-                        <h3 className={this.props.active === 'About' ? 'active' : 'inactive'}> About </h3>
+                        <h5 className={this.props.active === 'About' ? 'active' : 'inactive'}> About </h5>
                     </li>
                     <li className="tab"  onClick={() => this.props.changeView('Portfolio')}>
-                        <h3 className={this.props.active === 'Portfolio' ? 'active' : 'inactive'}>Portfolio</h3>
+                        <h5 className={this.props.active === 'Portfolio' ? 'active' : 'inactive'}>Portfolio</h5>
                     </li>
-                    <li className="tab"  onClick={() => this.props.changeView('CV')}>
-                        <h3 className={this.props.active === 'CV' ? 'active' : 'inactive'}>CV</h3>
+                    <li className="tab"  onClick={() => this.props.toggleModal()}>
+                        <h5 className={this.props.modal ? 'active' : 'inactive'}>CV</h5>
                     </li>
                 </ul>
             </div>
@@ -28,5 +28,7 @@ export default class NavBar extends Component {
 
 NavBar.propTypes = {
     active: PropTypes.string,
-    changeView: PropTypes.func
+    modal: PropTypes.bool,
+    changeView: PropTypes.func,
+    toggleModal: PropTypes.func
 }

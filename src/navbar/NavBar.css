@@ -1,12 +1,10 @@
 .nav-bar {
     width: 100%;
-    min-width: 600px;
-    height: 60px;
+    height: 65px;
     position: absolute;
     top: 0;
     z-index: 2;
-    border-bottom: crimson 3px double;
-    background-color: rgba(112, 5, 50, 0.4);
+    background-color: rgb(21, 20, 26);
 }
 
 .nav-text {
@@ -16,33 +14,41 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    color: crimson;
+    color: darkgray;
     padding-right: 10px;
 }
 
 #tabs {
     float: right;
+    padding: 23px;
 }
 
 .tab {
-    padding: 10px;
     display: block;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .tab:hover {
     cursor: pointer;
-    color: palevioletred;
+    color: rgb(75, 75, 75);
 }
 
 .active {
-    color: red;
-    border-bottom: red solid 1px;
+    color: rgb(75, 75, 75);
+    cursor: initial;
 }
 
 
 .name {
     float: left;
-    padding: 10px;
-    padding-left: 20px;
-    color: crimson;
+    padding: 15px;
+    color: darkgray;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 550px) {
+    .nav-text{
+        display: none;
+    } 
 }

@@ -1,78 +1,124 @@
 .about {
     text-align: left;
     margin: auto;
-    width: 80%;
+    width: 95%;
     padding: 10px;
     color: white;
     padding-top: 80px;
     padding-bottom: 40px;
 }
 
-
 .about-intro {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .about-section-top {
-    background-color: rgba(112, 5, 50, 0.4);
-    color: crimson;
+    background-color: rgba(53, 0, 66, 0.8);
+    color: slateblue;
     width: 100%;
     min-height: 40px;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 5px;
     text-align: left;
     border-radius: 15px 15px 0 0;
+    z-index: 2;
 }
 
 .about-section-bottom {
-    color: white;
+    color: darkgray;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
     border-radius: 0 0 15px 15px;
     text-align: left;
-    min-height: 150px;
+    min-height: 155px;
+    z-index: 2;
+    border: solid black 1px;
 }
 
-#about-top {
+.skill-section-bottom {
+    color: darkgray;
+    width: 100%;
+    margin-bottom: 23px;
+    border-radius: 0 0 15px 15px;
+    text-align: left;
+    min-height: 155px;
+    z-index: 2;
 }
 
 #about-bottom {
-    background-color: rgba(30,30,30, .7);
+    background-color: rgb(21, 20, 26, 0.8);
     padding: 10px;
 }
 
-#skills-top {
-
+.about-skill-wrap {
+    margin-left: 5px;
+    min-width: 200px;
 }
 
-#skills-bottom {
-
-}
-
-.about-section-top h4 {
-    opacity: 100%;
-}
 
 .about-icon {
     float: right;
-
+    color: slateblue;
+    opacity: 0.3;
 }
 
 .skill-icon {
     float: left;
     margin-left: 7px;
+    margin-right: 15px;
     margin-top: 7px;
 }
 
 .about-skill {
-    text-align: center;
     background-color: rgba(30,30,30, .7);
-    min-height: 35px;
-    margin-bottom: 5px;
+    height: 35px;
+    margin-bottom: 3px;
+    border: black 1px solid;
 }
 
 .about-skill p {
     padding-top: 5px;
 }
 
+#last {
+    border-radius: 0 0 15px 15px;
+    margin-bottom: 0;
+}
+
+.about h3 {
+    z-index: 2;
+    position: relative;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.it-me {
+    border-radius: 50%;
+    border: solid black 1px;
+    float: right;
+}
+
+.bold {
+    color: white;
+}
+
+.robot {
+    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .it-me{
+        display: none;
+    } 
+
+    .about-skill-wrap {
+        margin-left: 0;
+        position: relative;
+        width: 106.5%;
+        left: -15px;
+    }
+}

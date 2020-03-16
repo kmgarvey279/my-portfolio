@@ -9,7 +9,7 @@ export default class Preview extends Component {
 
   render() {
       return (
-        <div className="preview" id={this.props.number == this.props.current ? 'current-preview' : 'notCurrent-preview'}>
+        <div className="preview" id={this.props.number == this.props.current ? 'current-preview' : 'not-current-preview'}>
           {this.props.image}
         </div>
       );

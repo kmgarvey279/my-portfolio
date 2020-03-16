@@ -8,6 +8,7 @@
   background-size: cover;
   font-family: 'Roboto Mono';
   min-height: 100vh;
+  min-width: 320px;
   position: relative;
 }
 
@@ -16,52 +17,11 @@
 }
 
 .filter {
-  background-color: black;
-  opacity: 70%;
+  background-color: rgba(44, 5, 44, 0.4);
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: 0;
-}
-
-.sidebar1 {
-  height: 100%;
-  width: 1vw;
-  border-right: solid white 1px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 20%;
-}
-
-.sidebar2 {
-  height: 100%;
-  width: 1.5vw;
-  border-right: solid white 1px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 20%;
-}
-
-.sidebar3 {
-  height: 100%;
-  width: 1vw;
-  border-left: solid white 1px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  opacity: 20%;
-}
-
-.sidebar4 {
-  height: 100%;
-  width: 1.5vw;
-  border-left: solid white 1px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  opacity: 20%;
 }

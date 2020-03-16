@@ -1,75 +1,73 @@
 .portfolio {
     margin: auto;
-    width: 60vw;
+    width: 80vw;
     padding: 10px;
     padding-top: 20px;
-    padding-bottom: 80px;
 }
 
 .project-box {
     padding: 5px;
     margin-top: 15px;
-    max-width: 100%;
 }
 
 .project-info {
-    background-color: rgba(112, 5, 50, 0.4);
+    background-color: rgba(53, 0, 66, 0.8);
     margin-bottom: 5px;
     width: 100%;
-    padding-top: 5px;
-    color: crimson;
+    color: slateblue
 }
 
 .project-links{
     margin-top: 5px;
     height: 25px;
     width: 100%;
+    padding-bottom: 70px;
 }
 
 .project-links a {
-    color: rgb(23, 121, 212);
+    color: slateblue;
 }
 
 #git-link {
     float: left;
     width: 49.5%;
-    background-color: rgba(112, 5, 50, 0.4);
+    background-color: rgba(53, 0, 66, 0.8);
     padding: 2px;
+}
+
+#git-link:hover {
+    background-color: rebeccapurple;
 }
 
 #live-link {
     float: right;
     padding: 2px;
     width: 49.5%;
-    background-color: rgba(112, 5, 50, 0.4);
+    background-color: rgba(53, 0, 66, 0.8);
+}
+
+#live-link:hover {
+    background-color: rebeccapurple;
 }
 
 .project-image-wrap {
     position: relative;
-    width: 60vw;
-    height: 40vw;
-    background-color: rgba(112, 5, 50, 0.4);
-}
-
-.project-image-wrap-inner {
-    padding: 1vw;
+    width: 100%;
+    height: 43vw;
+    min-height: 500px;
+    max-height: 800px;
+    background-color: rgb(21, 20, 26, 0.8);
+    margin-left: none;
+    float: left;
 }
 
 .project-image img {
     height: 100%;
-    width: 85%;
+    width: 100%;
     position: absolute;
     top: 0;
     left:0;
     padding: 1vw;
-}
-
-.arrow-left:hover{
-    color: orangered;
-}
-
-.arrow-right:hover{
-    color: orangered;
 }
 
 .hover-tint-inactive {
@@ -89,11 +87,14 @@ p.hover-text-inactive {
 }
 
 .hover-tint-active {
-    width: 81.5%;
-    height: 95%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-color: rgba(250, 250, 250, 0.4);
     z-index: 1;
     position: absolute;
+    border: double white 4px;
 }
 
 p.hover-text-active {
@@ -105,20 +106,46 @@ p.hover-text-active {
    bottom: 0;
 }
 
-.project-previews {
-    position: absolute;
-    right: 0;
-    height: 40vw;
+
+
+.project-preview-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+
+@media only screen and (max-width: 767px) {
+    .project-previews {
+        margin: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .project-preview-list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        float: none;
+    }
+
+    .project-thumbnail {
+        margin-right: 1vw;
+        margin-left: 1vw;
+    }
+
+    .arrow {
+        margin-right: 1vw;
+        margin-left: 1vw;
+        transform: rotate(-90deg);
+    }
 }
 
 .project-thumbnail {
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
-    padding-bottom: 1.2vw;
-}
-
-.project-thumbnail img:hover{
-    border: solid red 2px;
+    background-color: rgba(112, 5, 50, 0.4);
+    margin-bottom: 1vw;
+    margin-top: 1vw;
 }
 
 .project-num {
@@ -133,9 +160,9 @@ p.hover-text-active {
     margin: 0;
     display: flex;
     flex-direction: row;
-    padding: 5px;
+    padding: 7px;
     position: absolute;
-    top: 15px;
+    top: -7px;
     right: 15px;
 }
 
@@ -144,11 +171,15 @@ p.hover-text-active {
     opacity: 70%;
 }
 
-.project-tech img {
-
-}
-
 .project-name {
     text-align: left;
-    padding-left: 10px;
+    padding: 7px;
+}
+
+.arrow {
+    color: slateblue;
+}
+
+.arrow:hover {
+    color: cornflowerblue;
 }

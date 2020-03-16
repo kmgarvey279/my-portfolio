@@ -1,38 +1,30 @@
-.cv {
-    margin: auto;
-    width: 80%;
-    padding: 10px;
-    text-align: left;
-    padding-top: 60px;
-    padding-bottom: 40px;
+.cv-doc {
+    overflow: hidden;
 }
 
-.cv-section {
+.cv-page {
+    padding: 10px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cv-modal {
+    overflow: hidden;
+}
+
+.cv-modal button {
+    margin: 10px;
     background-color: paleturquoise;
-    opacity: 80%;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 10px;
 }
 
-.cv-location {
-    margin-top: 0;
-    color: darkslateblue;
+.close-modal-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: darkgray;
 }
 
-.cv-title {
-    font-weight: bold;
-}
-
-.cv-header {
-    border-bottom: solid black 2px;
-    padding-top: 10px;
-}
-
-.cv-item {
-    margin-bottom: -15px;
-}
-
-#education {
-    padding-bottom: 20px;
+.close-modal-icon:hover {
+    color: gray;
 }

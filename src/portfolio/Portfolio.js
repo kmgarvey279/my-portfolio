@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import './Portfolio.css';
 import Preview from '../preview/Preview';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptop, faChevronLeft, faChevronRight, faFileCode } from '@fortawesome/free-solid-svg-icons';
+import { faLaptop, faChevronUp, faChevronDown, faChevronRight, faChevronLeft, faFileCode } from '@fortawesome/free-solid-svg-icons';
 import cryostat from '../assets/Capture.PNG';
 import bookshelf from '../assets/book-list.gif';
 import ssbu from '../assets/ssbu.gif';
@@ -23,7 +23,7 @@ export default class Portfolio extends Component {
     super(props);
     this.state = {
       hover: false,
-      project: 0
+      project: 0,
     };
   };
 
@@ -39,6 +39,13 @@ export default class Portfolio extends Component {
     } else if(num < 0){
       num = 4;
     }
+    this.setState({
+      project: num
+    })
+  }
+
+  selectProject(num){
+    console.log(num)
     this.setState({
       project: num
     })
@@ -97,14 +104,10 @@ export default class Portfolio extends Component {
           <h2>- Portfolio -</h2>
           <Container>
                 <Row>
-                  {/* <Col>
-                    <div className="arrow-left">
-                      <FontAwesomeIcon onClick={() => this.changeProject(this.state.project - 1)} icon={faChevronLeft} size="3x" />
-                    </div>
-                  </Col> */}
                   <Col>
                     <div className="project-box">
                       <Row>
+                        <Col>
                         <div className="project-info">
                           <h4 className="project-name">{projects[this.state.project].name}</h4>
                           <ul className="project-techs">
@@ -115,39 +118,51 @@ export default class Portfolio extends Component {
                             }
                           </ul>
                         </div>
+                        </Col>
                       </Row>
                       <Row>
+                        <Col md={11}>
                         <div className="project-image-wrap">
-                            <div className="project-image-wrap-inner" onMouseEnter={() => this.toggleHover(true)} onMouseLeave={() => this.toggleHover(false)}>
-                              <p className={this.state.hover ? 'hover-text-active' : 'hover-text-inactive'}>{projects[this.state.project].text}</p>
-                              <div className={this.state.hover === true ? 'hover-tint-active' : 'hover-tint-inactive'}>
-                              </div>
-                              <div className='project-image'>{projects[this.state.project].image}</div>
+                          <div className="project-image-wrap-inner" onMouseEnter={() => this.toggleHover(true)} onMouseLeave={() => this.toggleHover(false)}>
+                            <p className={this.state.hover ? 'hover-text-active' : 'hover-text-inactive'}>{projects[this.state.project].text}</p>
+                            <div className={this.state.hover === true ? 'hover-tint-active' : 'hover-tint-inactive'}>
                             </div>
-                          <Col>
-                            <div className="project-previews">
-                              {Object.keys(projects).map( key =>
-                                <div className="project-thumbnail"><Preview image={projects[key].image} number={key} current={this.state.project} /></div>
-                              )}
-                            </div>
-                          </Col>
+                            <div className='project-image'>{projects[this.state.project].image}</div>
+                          </div>
                         </div>
+                        </Col>
+                        <Col md={1}>
+                        <div className="project-previews">
+                          <ul className="project-preview-list">
+                            <li><FontAwesomeIcon className="arrow" onClick={() => this.changeProject(this.state.project - 1)} icon={faChevronUp} size="3x" /></li>
+                            {Object.keys(projects).map( key =>
+                              <li className="project-thumbnail" onClick={() => this.selectProject(key)}><Preview image={projects[key].image} number={key} current={this.state.project} /></li>
+                            )}
+                             <li><FontAwesomeIcon className="arrow" onClick={() => this.changeProject(this.state.project + 1)} icon={faChevronDown} size="3x" /></li>
+                          </ul>
+                        </div>
+                        </Col>
                       </Row>
                       <Row>
                         <div className="project-links">
-                            <div id="git-link">
-                              <a href={projects[this.state.project].gitLink}><FontAwesomeIcon icon={faFileCode} size="1x" /> Repo</a>
-                            </div>
+                          <Col>
+                            <a href={projects[this.state.project].gitLink}>
+                              <div id="git-link">
+                                <FontAwesomeIcon icon={faFileCode} size="1x" /> Repo
+                              </div>
+                            </a>
+                          </Col>
+                          <Col>
+                          <a href={projects[this.state.project].liveLink}> 
                             <div id="live-link">
-                              <a href={projects[this.state.project].liveLink}><FontAwesomeIcon icon={faLaptop} size="1x" /> Live</a>
+                              <FontAwesomeIcon icon={faLaptop} size="1x" /> Live
                             </div>
+                          </a>
+                          </Col>
                         </div>
                       </Row>
                     </div>
                   </Col>
-                  {/* <Col>
-                    <FontAwesomeIcon onClick={() => this.changeProject(this.state.project + 1)} className="arrow-right" icon={faChevronRight} size="3x" />
-                  </Col> */}
                 </Row>
           </Container>
       </div>
