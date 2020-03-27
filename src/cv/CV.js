@@ -9,7 +9,6 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { Document, Page, pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-
 export default class CV extends Component {
   constructor(props){
     super(props);
@@ -21,8 +20,12 @@ export default class CV extends Component {
             <Document file={myPDF} className="cv-doc">
               <Page pageNumber={1} className="cv-page" width={790}/>
             </Document>
-            <FontAwesomeIcon onClick={() => this.props.toggleModal()} className="close-modal-icon" icon={faWindowClose} size="2x" />
-            <button>Download<FontAwesomeIcon icon={faDownload} size="sm" /></button>
+            <FontAwesomeIcon onClick={() => this.props.toggleModal()} className="close-modal-icon" icon={faWindowClose} size="2x" /> 
+            <div className="download">
+              <a href={myPDF} download>
+                Download <FontAwesomeIcon icon={faDownload} size="sm" />
+              </a>
+            </div>
         </Modal>
     );
   }

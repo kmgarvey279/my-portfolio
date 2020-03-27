@@ -8,6 +8,8 @@
 .project-box {
     padding: 5px;
     margin-top: 15px;
+
+    max-width: 1100px;
 }
 
 .project-info {
@@ -21,7 +23,8 @@
     margin-top: 5px;
     height: 25px;
     width: 100%;
-    padding-bottom: 70px;
+    padding-bottom: 85px;
+    padding-top: 4px;
 }
 
 .project-links a {
@@ -58,7 +61,6 @@
     max-height: 800px;
     background-color: rgb(21, 20, 26, 0.8);
     margin-left: none;
-    float: left;
 }
 
 .project-image img {
@@ -68,7 +70,31 @@
     top: 0;
     left:0;
     padding: 1vw;
+    z-index: 1;
 }
+
+.project-image-next img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    padding: 1vw;
+    z-index: 2;
+    opacity: 0;
+}
+
+#fade-in img {
+    animation-name: fade;
+    animation-duration: 3000ms;
+
+}
+
+@keyframes fade {
+    from {opacity:0;}
+    to {opacity:1;}
+  }
+
 
 .hover-tint-inactive {
     width: 81.5%;
@@ -92,35 +118,60 @@ p.hover-text-inactive {
     top: 0;
     left: 0;
     background-color: rgba(250, 250, 250, 0.4);
-    z-index: 1;
+    z-index: 3;
     position: absolute;
-    border: double white 4px;
+    border: double  plum 4px;
 }
 
 p.hover-text-active {
    opacity: 100%;
-   z-index: 2;
+   width: 100%;
    position: absolute;
-   left: 20%;
-   right: 20%;
-   bottom: 0;
+   top: 0;
+   margin: auto;
+   color: black;
+   z-index: 4;
+   background-color:  plum;
+   padding: 5px;
 }
 
-
+.features-active {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    z-index: 4;
+    position: absolute;
+    bottom: -15px;
+    text-align: left;
+    background-color: plum;
+    width: 100%;
+}
 
 .project-preview-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    float: right;
+    margin: 0;
+    padding: 0;
+    height: 43vw;
+    min-height: 500px;
+    max-height: 800px;
+    position: relative;
+    left: -22.5px;
+    width: 5.5vw;
+
+}
+
+#project-num {
+    opacity: 0.5;
 }
 
 @media only screen and (max-width: 767px) {
     .project-previews {
-        margin: auto;
         display: block;
         margin-left: auto;
         margin-right: auto;
+        padding-top: 5px;
     }
     
     .project-preview-list {
@@ -128,6 +179,7 @@ p.hover-text-active {
         display: flex;
         flex-direction: row;
         float: none;
+        margin: 0;
     }
 
     .project-thumbnail {
@@ -140,12 +192,15 @@ p.hover-text-active {
         margin-left: 1vw;
         transform: rotate(-90deg);
     }
+
+    .project-tech {
+        display: none;
+    }
 }
 
 .project-thumbnail {
-    background-color: rgba(112, 5, 50, 0.4);
-    margin-bottom: 1vw;
-    margin-top: 1vw;
+    margin-bottom: .5vw;
+    margin-top: .5vw;
 }
 
 .project-num {

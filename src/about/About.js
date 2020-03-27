@@ -24,7 +24,7 @@ function About() {
       <Container>
         <div className="about-intro">
           <h3>
-            Hi, I'm a Seattle-based developer with a passion for combining technology and art to create intuitive and visually appealing 
+            Hi, I'm a Seattle-based developer with a passion for combining <span className="top-bold">technology</span> and <span className="top-bold">design</span> to create intuitive, reliable, and visually appealing 
             web applications.
           </h3>
           <div className="robot-wrap">
@@ -39,16 +39,16 @@ function About() {
                   <h4>Creative Vision</h4>
                 </div>
                 <div className="about-section-bottom" id="about-bottom">
-                  <p>I try to bring a <span className="bold">unique style</span> to everything I build. If you have mock-up and wireframes, I'm happy to help <span className="bold">bring your designs to life</span>. If you'd prefer me to take the lead on design, I'm prepared to <span className="bold">explore possibilities</span> until we find what you're looking for. </p>
+                  <p>I try to bring a <span className="bold">unique style</span> to everything I build. Already have your own mockups? Great! I'm happy to help <span className="bold">bring your designs to life</span>. Not sure about the design? I'm also happy to <span className="bold">explore possibilities</span> until we find the perfect look and features for your site.</p>
                 </div>
               </Row>
               <Row>
                 <div className="about-section-top" id="about-top">
                   <FontAwesomeIcon className="about-icon" icon={faHandshake} size="2x" />
-                  <h4>Interpersonal Skillset</h4>
+                  <h4>A Customer-oriented Approch</h4>
                 </div>
                 <div className="about-section-bottom" id="about-bottom">
-                  <p>I've worked in the trenches of customer service for almost a decade and understand the impotance of <span className="bold">connecting with customers</span> and <span className="bold">delivering consitant and high-quality experences</span>. </p> 
+                  <p>I've worked in the trenches of customer service for almost a decade and understand the importance of <span className="bold">connecting with customers</span> and <span className="bold">delivering reliable and high-quality products and service</span>. I aspire to always put myself in the position of the customer in order to better anticipate their needs and prefences.</p> 
                 </div>
               </Row>
           </Col>
@@ -110,12 +110,12 @@ function About() {
             </div>
             <div className="about-section-bottom" id="about-bottom">
               <Row>
-              <Col sm={9}>
-                <p>Kevin Garvey is a full-stack developer living in Seattle, Washnington. He specialises on front-end and UI development and enjoys dabbilig in digital art and game design in his free time.</p> 
-              </Col>
-              <Col sm={3}>
-                <img className="it-me" src={me} width="130" height="130"/>
-              </Col>
+                <Col sm={9}>
+                  <p>Kevin is a developer living in Seattle, Washington currently seeking oportunites in the tech field. He specialises on front-end and UI development and enjoys dabbilig in digital art and game design in his free time.</p> 
+                </Col>
+                <Col sm={3}>
+                  <img className="it-me" src={me} width="130" height="130"/>
+                </Col>
               </Row>
             </div>
         </Row>
